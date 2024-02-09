@@ -9,23 +9,34 @@
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    animation: App-logo-spin infinite 10s linear;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App-div {
+  background-color: white;
+  min-height: 50vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: #000000;
 }
 
 .App-link {
-  color: #61dafb;
+  color: #4f7efd;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 28px;
+  padding: 8px 16px;
+  width: 30%;
+  min-height: 44px;
+  /*border: unset;*/
+  border-radius: 4px;
+  outline-color: rgb(78, 125, 251, 0.7);
+  background-color: rgb(255, 255, 255);
 }
 
 @keyframes App-logo-spin {
@@ -35,4 +46,83 @@
   to {
     transform: rotate(360deg);
   }
+}
+.App-logo{
+  width: 100px;
+  height: 100px;
+}
+/*.vignette{*/
+/*  position: absolute;*/
+/*  top: 0;*/
+/*  left: 0;*/
+/*  width: 100%;*/
+/*  height: 100%;*/
+/*  background: radial-gradient(ellipse at center, rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 100%);}*/
+
+.buttonSubmit {
+  margin: 1.5rem;
+  width: 250px;
+  height: 43px;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-family: sans-serif;
+  font-weight: 700;
+  font-size: .9rem;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+  7px 7px 20px 0px rgba(0,0,0,.1),
+  4px 4px 5px 0px rgba(0,0,0,.1);
+  outline: none;}
+.buttonSubmit {
+  border: none;
+  background: rgb(40, 99, 253);
+  background: linear-gradient(0deg, rgb(40, 99, 253) 0%, rgba(40, 99, 253, 0.82) 100%);
+  color: #fff;
+  overflow: hidden;
+}
+.buttonSubmit:hover {
+  text-decoration: none;
+  color: #fff;
+}
+.buttonSubmit:before {
+  position: absolute;
+  content: '';
+  display: inline-block;
+  top: -180px;
+  left: 0;
+  width: 30px;
+  height: 100%;
+  background-color: #fff;
+  animation: shiny-btn1 3s ease-in-out infinite;
+}
+.buttonSubmit:hover{
+  opacity: .7;
+}
+.buttonSubmit:active{
+  box-shadow:  4px 4px 6px 0 rgba(255,255,255,.3),
+  -4px -4px 6px 0 rgba(116, 125, 136, .2),
+  inset -4px -4px 6px 0 rgba(255,255,255,.2),
+  inset 4px 4px 6px 0 rgba(0, 0, 0, .2);
+}
+
+
+@keyframes shiny-btn1 {
+  0% { transform: scale(0) rotate(45deg); opacity: 0; }
+  80% { transform: scale(0) rotate(45deg); opacity: 0.5; }
+  81% { transform: scale(4) rotate(45deg); opacity: 1; }
+  100% { transform: scale(50) rotate(45deg); opacity: 0; }
+}
+
+.qrCode{
+  border: 2px solid rgba(40, 99, 253, 0.51);
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+  7px 7px 20px 0px rgba(0,0,0,.1),
+  4px 4px 5px 0px rgba(0,0,0,.1);
 }
