@@ -5,7 +5,7 @@ import {useState} from "react";
 
 function App() {
     const [value, setValue] = useState('https://github.com/ch1nya')
-    const [prevValue, setPrevValue] = useState('')
+    const [prevValue, setPrevValue] = useState('https://github.com/ch1nya')
     const changeHandler = (e)=>{
         setPrevValue(e.target.value)
     }
@@ -15,7 +15,6 @@ function App() {
 
     return (
         <div className="App">
-            <div className='vignette'>
                 <div className="App-div">
                     <img src={logo} className="App-logo" alt="logo"/>
                     <p>
@@ -38,10 +37,10 @@ function App() {
                     </div>
                 </div>
                 <div className='output'>
-                    {value && prevValue ? <QRCode className='qrCode' value={value}/> : ''}
+                    {value && prevValue
+                        ? <QRCode className='qrCode' value={value}/>
+                        : ''}
                 </div>
-
-            </div>
         </div>
     );
 }
